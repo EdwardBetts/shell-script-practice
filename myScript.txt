@@ -1,0 +1,48 @@
+#!/bin/sh
+# A simple shell/bash script
+
+count=5
+while test $count -lt 10
+do 
+  echo the value is $count
+  count=`expr $count + 1`
+done
+
+count_1=7
+until test $count_1 -eq 3
+do 
+  echo the value for until loop is $count_1
+  count_1=`expr $count_1 - 1`
+done
+
+
+set `date`
+if test $4 -lt 5
+then
+echo "Cool, it's Wednesday"
+elif test $1 = Sat || test $1 = Wed
+then
+echo “The or operator works pretty well”
+else
+echo “Not that well organized script though. No logic here :\)”
+fi
+
+set `date`
+case $1 in
+Fri) echo “How it’s Friday”;;
+Wed | Sun) echo “nothing new still homework”;
+	  echo “or and assignments”;;
+*)  echo “here is whatever you want”;
+	  echo “yeah the end”;;
+esac
+		
+
+
+set `ps -l|head`
+
+if test $1 = PID
+then
+echo $1
+else
+echo $2
+fi

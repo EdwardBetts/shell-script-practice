@@ -1,0 +1,9 @@
+#!/bin/sh
+#a simple shell script
+#PID=`ps -eaf | grep less | grep -v grep | awk ‘{print $2}'`
+#if [[ "" !=  "$PID" ]]; then
+#  echo "killing $PID"
+#  kill $PID	
+#fi
+
+kill `ps -el | grep less | awk '{print $4}'`

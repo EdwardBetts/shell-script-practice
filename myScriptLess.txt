@@ -1,0 +1,9 @@
+#!/bin/sh
+
+ps -l|grep less > junkfile
+
+while read line;
+do PID=${line:4:6}; kill $PID
+
+done < junkfile
+

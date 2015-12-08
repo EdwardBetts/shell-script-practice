@@ -1,0 +1,10 @@
+#!/bin/sh
+
+count=0 
+until $count -eq 1
+   do `ps l| grep “sleep” | awk ‘//{print $3, $6, $9}’ > idFile`
+   cat idFile
+   #   
+   sleep 1		
+done < idFiles
+
