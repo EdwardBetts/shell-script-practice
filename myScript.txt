@@ -1,11 +1,12 @@
 #!/bin/sh
-# A simple shell/bash script
+# A simple shell/bash script, run it as $ sh myScript.txt in the terminal
 
-count=5
-while test $count -lt 10
-do 
+count=5 # initialize a variable count
+while test $count -lt 10 # "test" does comparison on files/ in this case on variables
+do 						# do-loop
   echo the value is $count
-  count=`expr $count + 1`
+  count=`expr $count + 2` # incrementing the value of "count", using expr to perform path operations
+  						  # and backquotes to treat everything inside as an executable command
 done
 
 count_1=7
@@ -15,16 +16,20 @@ do
   count_1=`expr $count_1 - 1`
 done
 
+# "set" - a built-in function used to define and determine the values of the system environment
+# "an environment variable" - a dynamic object an a computer that stores a value, which in turn can be referenced
+# by one or more software programs
 
+# here I use set to access the value of "date" ,and then evaluate each argument in "set" in the if-elif-else statment
 set `date`
 if test $4 -lt 5
 then
-echo "Cool, it's Wednesday"
+	echo "Cool, it's Wednesday"
 elif test $1 = Sat || test $1 = Wed
 then
-echo “The or operator works pretty well”
+	echo “The or operator works pretty well”
 else
-echo “Not that well organized script though. No logic here :\)”
+	echo “Not that well organized script though. No logic here :\)”
 fi
 
 set `date`

@@ -1,5 +1,6 @@
 #!/bin/sh
-#a simple shell script
+
+#a simple shell script ; run it with $ sh myScript2.txt
 #PID=`ps -eaf | grep less | grep -v grep | awk ‘{print $2}'`
 #if [[ "" !=  "$PID" ]]; then
 #  echo "killing $PID"
