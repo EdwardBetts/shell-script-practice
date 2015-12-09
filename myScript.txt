@@ -34,11 +34,11 @@ fi
 
 set `date`
 case $1 in
-Fri) echo “How it’s Friday”;;
-Wed | Sun) echo “nothing new still homework”;
-	  echo “or and assignments”;;
-*)  echo “here is whatever you want”;
-	  echo “yeah the end”;;
+Fri) 		echo “How it’s Friday”;;
+Wed | Sun) 	echo “nothing new still homework”;
+	  		echo “or and assignments”;;
+*) 			echo “here is whatever you want”;
+	 		echo “yeah the end”;;
 esac
 		
 
