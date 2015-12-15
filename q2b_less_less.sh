@@ -14,3 +14,4 @@ do
   fi
 done < tmp.txt  
 
+#ps -lh displays the header (one line) of info related to the keyword processes defined by -l

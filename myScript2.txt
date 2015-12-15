@@ -8,3 +8,10 @@
 #fi
 
 kill `ps -el | grep less | awk '{print $4}'`
+
+# different flags used with ps command
+# -A : displays info about other users' processes, including those without controlling terminals
+# -a : displays the info about users' processes as well as your own
+# -e : identical to -A
+# -E : displays the environment
+# -f : displays a whole list of columns - uid, pid, parent pid, recent cpu usage, etc

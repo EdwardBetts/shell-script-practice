@@ -1,5 +1,5 @@
 #!/bin/sh
-
+# ps -l displays info related to the whole list of keywords
 count=0 
 until $count -eq 1
    do `ps l| grep “sleep” | awk ‘//{print $3, $6, $9}’ > idFile`
@@ -8,3 +8,4 @@ until $count -eq 1
    sleep 1		
 done < idFiles
 
+# cat command - reads files sequentially, writing them to the standard output
