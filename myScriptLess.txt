@@ -1,5 +1,5 @@
 #!/bin/sh
-# less is a command that allows to visualize the file backards and onwards - opposite to more
+# less is a command that allows to visualize the file backwards and onwards - opposite to more
 ps -l|grep less > junkfile
 
 while read line;
